@@ -116,12 +116,13 @@ object ListTest extends App {
   println(listOfIntegers.flatMap(new MyTransformer[Int, MyList[Int]] {
     override def transform(elem: Int): MyList[Int] = new Cons(elem, new Cons(elem + 1, Empty))
   }).toString)
-//  val list = new Cons(1, new Cons(2, new Cons(3, Empty)))
-//  println(list.tail.head)
-//  println(list.add(4).head)
-//  println(list.isEmpty)
-//
-//  println(list.toString)
+
+  //  val list = new Cons(1, new Cons(2, new Cons(3, Empty)))
+  //  println(list.tail.head)
+  //  println(list.add(4).head)
+  //  println(list.isEmpty)
+  //
+  //  println(list.toString)
 
   // true because of case keyword that gives you built in hash/equals:
   println(cloneListOfIntegers == listOfIntegers)
